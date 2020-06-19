@@ -5,7 +5,7 @@ namespace Brobeans1
 {
 	/// <summary>
 	/// NOTES:
-	/// OOP / classes / instances
+	/// OOP / classes / inherritence / interfaces / virtual methods
 	/// Namespaces
 	/// Exceptions
 	/// String format sugar
@@ -14,6 +14,21 @@ namespace Brobeans1
 	{
 		static void Main(string[] args)
 		{
+			#region Exceptions
+
+			try
+			{
+				//throw new Exception("OH NO, IT BROKE");
+				Sedan nullSedan = null;
+				nullSedan.Start();
+			}
+			catch (Exception e)
+			{
+
+			}
+
+			#endregion
+
 			#region Read/write console
 			//Console.WriteLine("What is your name? ");
 
@@ -29,8 +44,8 @@ namespace Brobeans1
 			var myCar = new Sedan(2, 5);
 			Console.WriteLine(myCar.Wheels); // 0 when Wheels is not set
 
-			var myTruck = new Pickup(6, false);
-			if (myTruck.TruckNuts)
+			var myTruck = new Pickup(6, new TruckNuts());
+			if (myTruck.TruckNuts != null)
 			{
 				Console.WriteLine("My Truck Has Nuts: yes");
 			}
@@ -38,6 +53,10 @@ namespace Brobeans1
 			{
 				Console.WriteLine("My Truck Has Nuts: no");
 			}
+
+			// Move the car
+			Console.WriteLine($"The Sedan moved {myCar.Move(true)} spaces");
+
 			#endregion
 		}
 	}
