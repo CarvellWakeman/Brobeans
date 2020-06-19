@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Brobeans1": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "MY_VAR": "MyValue"
+      }
+    }
+  }
+}
