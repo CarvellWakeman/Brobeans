@@ -1,4 +1,3 @@
-.vs
-.git
-Brobeans1/bin
-Brobeans1/obj
+Brobeans1/bin/*
+Brobeans1/obj/*
+.vs/*
